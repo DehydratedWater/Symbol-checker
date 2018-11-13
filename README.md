@@ -2,13 +2,13 @@
 This program let's user create base of labeled symbols examples and train (backpropagation) neural network to detect them
 
 ## Creating examples
-![alt text](https://github.com/DehydratedWater/Symbol-checker---Neuron-Network---JavaFX/blob/master/NNGuiBase.png)
+![alt text](https://github.com/DehydratedWater/Symbol-checker/blob/master/NNGuiBase.png)
 
 ## Training neuron network
-![alt text](https://github.com/DehydratedWater/Symbol-checker---Neuron-Network---JavaFX/blob/master/NNGuiLearning.png)
+![alt text](https://github.com/DehydratedWater/Symbol-checker/blob/master/NNGuiLearning.png)
 
 ## Testing
-![alt text](https://github.com/DehydratedWater/Symbol-checker---Neuron-Network---JavaFX/blob/master/NeuronNetworkGui.png)
+![alt text](https://github.com/DehydratedWater/Symbol-checker/blob/master/NeuronNetworkGui.png)
 
 ## Technologies
 * Java 1.8
