@@ -11,7 +11,7 @@ This program let's user create base of labeled symbols examples and train (backp
 ![alt text](https://github.com/DehydratedWater/Symbol-checker---Neuron-Network---JavaFX/blob/master/NeuronNetworkGui.png)
 
 ## Technologies
--> Java 1.8
+-> Java 1.8\n
 -> JavaFx
 
 ## Installation
