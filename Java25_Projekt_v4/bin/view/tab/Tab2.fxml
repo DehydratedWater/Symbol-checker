@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="450.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.tab.Tab2Controller">
+   <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <HBox alignment="CENTER_LEFT" prefHeight="29.0" prefWidth="946.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Region prefWidth="10.0" />
+                  <Label text="Set symbols" />
+                  <Region prefHeight="25.0" prefWidth="125.0" />
+                  <Label text="Set network:" />
+                  <Region prefWidth="10.0" />
+                  <ComboBox fx:id="networkSelector" editable="true" prefHeight="25.0" prefWidth="140.0" />
+                  <Region prefWidth="10.0" />
+                  <Button mnemonicParsing="false" onAction="#learn" text="Learn" />
+                  <Region prefHeight="25.0" prefWidth="5.0" />
+                  <Button mnemonicParsing="false" onAction="#stop" text="Stop" />
+                  <Region prefHeight="25.0" prefWidth="4.0" />
+                  <Button mnemonicParsing="false" onAction="#removeNetwork" text="Remove" />
+                  <Region prefHeight="25.0" prefWidth="4.0" />
+                  <CheckBox fx:id="showExamples" mnemonicParsing="false" text="Preview" />
+                  <Region prefHeight="25.0" prefWidth="16.0" />
+                  <Label text="Sym: " />
+                  <Label fx:id="numberOfSymbols" text="0" />
+                  <Label text="/" />
+                  <Label fx:id="limitOfSymbols" text="10" />
+                  <Region prefHeight="25.0" prefWidth="5.0" />
+                  <Label text="Th: " />
+                  <Label fx:id="numberOfThreads" text="0" />
+                  <Label text="/" />
+                  <Label fx:id="LimitOfThreads" text="10" />
+               </children>
+               <padding>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </padding>
+            </HBox>
+         </top>
+         <left>
+            <TreeView fx:id="symbolSelector" prefHeight="200.0" prefWidth="200.0" showRoot="false" BorderPane.alignment="CENTER" />
+         </left>
+         <right>
+            <VBox alignment="CENTER" prefHeight="421.0" prefWidth="384.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox prefWidth="200.0">
+                     <children>
+                        <Label text="Network accuracy:" />
+                        <Region prefWidth="10.0" />
+                        <ProgressBar fx:id="progressBar1" prefWidth="200.0" progress="0.0" />
+                        <Region prefWidth="10.0" />
+                        <Label fx:id="progress1" text="0%" />
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </HBox>
+                  <HBox prefWidth="200.0">
+                     <children>
+                        <Label text="Example accuracy:" />
+                        <Region prefWidth="10.0" />
+                        <ProgressBar fx:id="progressBar2" prefWidth="200.0" progress="0.0" />
+                        <Region prefWidth="10.0" />
+                        <Label fx:id="progress2" text="0%" />
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </HBox>
+                  <HBox prefWidth="200.0">
+                     <children>
+                        <Label text="Learning cycle:" />
+                        <Region prefHeight="18.0" prefWidth="28.0" />
+                        <ProgressBar fx:id="progressBar3" prefWidth="200.0" progress="0.0" />
+                        <Region prefWidth="10.0" />
+                        <Label fx:id="progress3" text="0%" />
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </HBox>
+                  <HBox prefWidth="200.0">
+                     <children>
+                        <Label text="Learning:" />
+                        <Region prefHeight="18.0" prefWidth="57.0" />
+                        <ProgressBar fx:id="progressBar4" prefWidth="200.0" progress="0.0" />
+                        <Region prefWidth="10.0" />
+                        <Label fx:id="progress4" text="0%" />
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </VBox>
+         </right>
+         <center>
+            <Canvas fx:id="exampleCanvas" height="300.0" width="200.0" BorderPane.alignment="CENTER" />
+         </center>
+         <bottom>
+            <HBox alignment="CENTER_LEFT" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Region prefWidth="10.0" />
+                  <Label text="Learn speed: " />
+                  <Region prefWidth="10.0" />
+                  <Slider fx:id="learningSpeedSelector" prefHeight="14.0" prefWidth="660.0" HBox.hgrow="ALWAYS" />
+                  <Region prefWidth="5.0" />
+                  <Label fx:id="learningSpeedLabel" prefWidth="40.0" text="0.01" />
+               </children>
+               <padding>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </padding>
+            </HBox>
+         </bottom>
+      </BorderPane>
+   </children>
+</AnchorPane>

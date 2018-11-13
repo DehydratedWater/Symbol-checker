@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="450.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.tab.Tab4Controller">
+   <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <right>
+            <VBox alignment="CENTER" prefHeight="421.0" prefWidth="384.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox prefWidth="200.0">
+                     <children>
+                        <Label text="Symbol:">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <Region prefWidth="10.0" />
+                        <Label fx:id="symbol" text="Label">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <Region prefHeight="10.0" />
+                  <HBox prefWidth="200.0">
+                     <children>
+                        <Label text="1st" />
+                        <Region prefHeight="18.0" prefWidth="12.0" />
+                        <ProgressBar fx:id="accuracyBar1" prefWidth="200.0" progress="0.0" />
+                        <Region prefWidth="10.0" />
+                        <Label fx:id="accuracy1" prefWidth="30.0" text="59%" />
+                        <Region prefWidth="10.0" />
+                        <Label fx:id="symbol1" text="Label" />
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </HBox>
+                  <HBox prefWidth="200.0">
+                     <children>
+                        <Label text="2th" />
+                        <Region prefWidth="10.0" />
+                        <ProgressBar fx:id="accuracyBar2" prefWidth="200.0" progress="0.0" />
+                        <Region prefWidth="10.0" />
+                        <Label fx:id="accuracy2" prefWidth="30.0" text="100%" />
+                        <Region prefWidth="10.0" />
+                        <Label fx:id="symbol2" text="Label" />
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </HBox>
+                  <HBox prefWidth="200.0">
+                     <children>
+                        <Label text="3th" />
+                        <Region prefHeight="18.0" prefWidth="10.0" />
+                        <ProgressBar fx:id="accuracyBar3" prefWidth="200.0" progress="0.0" />
+                        <Region prefWidth="10.0" />
+                        <Label fx:id="accuracy3" prefWidth="30.0" text="34%" />
+                        <Region prefWidth="10.0" />
+                        <Label fx:id="symbol3" text="Label" />
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </HBox>
+                  <HBox prefWidth="200.0">
+                     <children>
+                        <Label text="4th" />
+                        <Region prefHeight="18.0" prefWidth="11.0" />
+                        <ProgressBar fx:id="accuracyBar4" prefWidth="200.0" progress="0.0" />
+                        <Region prefWidth="10.0" />
+                        <Label fx:id="accuracy4" prefWidth="30.0" text="12%" />
+                        <Region prefWidth="10.0" />
+                        <Label fx:id="symbol4" text="Label" />
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </HBox>
+                  <HBox prefWidth="200.0">
+                     <children>
+                        <Label text="5th" />
+                        <Region prefHeight="18.0" prefWidth="11.0" />
+                        <ProgressBar fx:id="accuracyBar5" prefWidth="200.0" progress="0.0" />
+                        <Region prefWidth="10.0" />
+                        <Label fx:id="accuracy5" prefWidth="30.0" text="12%" />
+                        <Region prefWidth="10.0" />
+                        <Label fx:id="symbol5" text="Label" />
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </VBox>
+         </right>
+         <center>
+            <Canvas fx:id="outputCanvas" height="300.0" width="200.0" BorderPane.alignment="CENTER" />
+         </center>
+         <top>
+            <HBox alignment="CENTER_LEFT" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Region prefWidth="20.0" />
+                  <Label text="Set network:" />
+                  <Region prefWidth="10.0" />
+                  <ChoiceBox fx:id="networkSetter" prefWidth="150.0">
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </HBox.margin>
+                  </ChoiceBox>
+                  <Region prefWidth="20.0" />
+               </children>
+            </HBox>
+         </top>
+         <left>
+            <Canvas fx:id="inputCanvas" height="300.0" width="200.0" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets left="5.0" />
+               </BorderPane.margin>
+            </Canvas>
+         </left>
+         <bottom>
+            <HBox prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Region prefWidth="10.0" />
+                  <Button fx:id="reset" mnemonicParsing="false" onAction="#reset" text="Reset">
+                     <HBox.margin>
+                        <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Region prefWidth="20.0" />
+                  <Button mnemonicParsing="false" onAction="#addSymbol" text="Add">
+                     <HBox.margin>
+                        <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                     </HBox.margin>
+                  </Button>
+                  <ChoiceBox fx:id="symbolSelector" prefWidth="150.0">
+                     <HBox.margin>
+                        <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                     </HBox.margin>
+                  </ChoiceBox>
+               </children>
+            </HBox>
+         </bottom>
+      </BorderPane>
+   </children>
+</AnchorPane>
